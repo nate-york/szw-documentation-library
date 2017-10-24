@@ -1,0 +1,184 @@
+---
+title: Carousel Lazy Loading full
+description: 03.22.2017 || Nate York
+category: prototypes
+nav_sort: 2
+---
+<style>
+    td:nth-child(n+2){ text-align: center;}
+</style>
+
+<section class="column column--xsmall-centered column--center-content column--no-top-padding">
+    <h2>Objective</h2>
+    <p>
+        Add lazy loading support to hero images so that only the first image is loaded on page load, and the others are loaded on demand only. This should result in quicker page load times. 
+    </p>
+</section>
+
+<div class="hero">
+    <div class="component-pane-holder js-slick-hero">
+        <div class="hero__image hero__image--gradient-cover carousel__item carousel__item--no-padding">
+        
+        </div>
+    </div>
+</div>
+
+
+<div class="hero">
+    <div class="component-pane-holder js-slick-hero">
+        <div class="hero__image hero__image--gradient-cover carousel__item carousel__item--no-padding">
+                        
+            <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                <source data-srcset="http://placehold.it/1600x720/92ac86" media="(min-width: 1024px)">
+                <source data-srcset="http://placehold.it/1200x675/92ac86 1x, http://placehold.it/1800x1012/92ac86 2x" media="(min-width: 768px)">
+                <source data-srcset="http://placehold.it/800x600/92ac86 1x, http://placehold.it/1200x900/92ac86 2x" media="(min-width: 480px)">
+                <source data-srcset="http://placehold.it/480x630/92ac86 1x, http://placehold.it/768x1008/92ac86 2x"> 
+                <!--[if IE 9]></video><![endif]-->
+                <img class="lazyload" data-src="http://placehold.it/1600x720/92ac86" alt="@(imageUrl)">
+            </picture>
+            
+        </div>
+        <div class="hero__image hero__image--gradient-cover carousel__item carousel__item--no-padding">
+            <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                <source data-srcset="http://placehold.it/1600x720/ff0000" media="(min-width: 1024px)">
+                <source data-srcset="http://placehold.it/1200x675/ff0000 1x, http://placehold.it/1800x1012/ff0000 2x" media="(min-width: 768px)">
+                <source data-srcset="http://placehold.it/800x600/ff0000 1x, http://placehold.it/1200x900/ff0000 2x" media="(min-width: 480px)">
+                <source data-srcset="http://placehold.it/480x630/ff0000 1x, http://placehold.it/768x1008/ff0000 2x">
+                <!--[if IE 9]></video><![endif]-->
+                <img class="lazyload" data-src="http://placehold.it/1600x720/ff0000" alt="@(imageUrl)">
+            </picture>
+        </div>
+        <div class="hero__image hero__image--gradient-cover carousel__item carousel__item--no-padding">    
+            <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                <source data-srcset="http://placehold.it/1600x720/ffff00" media="(min-width: 1024px)">
+                <source data-srcset="http://placehold.it/1200x675/ffff00 1x, http://placehold.it/1800x1012/ffff00 2x" media="(min-width: 768px)">
+                <source data-srcset="http://placehold.it/800x600/ffff00 1x, http://placehold.it/1200x900/ffff00 2x" media="(min-width: 480px)">
+                <source data-srcset="http://placehold.it/480x630/ffff00 1x, http://placehold.it/768x1008/ffff00 2x">
+                <!--[if IE 9]></video><![endif]-->
+                <img class="lazyload" data-src="http://placehold.it/1600x720/ffff00" alt="@(imageUrl)">
+            </picture>
+        </div>
+        <div class="hero__image hero__image--gradient-cover carousel__item carousel__item--no-padding">    
+            <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                <source data-srcset="http://placehold.it/1600x720/00ffff" media="(min-width: 1024px)">
+                <source data-srcset="http://placehold.it/1200x675/00ffff 1x, http://placehold.it/1800x1012/00ffff 2x" media="(min-width: 768px)">
+                <source data-srcset="http://placehold.it/800x600/00ffff 1x, http://placehold.it/1200x900/00ffff 2x" media="(min-width: 480px)">
+                <source data-srcset="http://placehold.it/480x630/00ffff 1x, http://placehold.it/768x1008/00ffff 2x">
+                <!--[if IE 9]></video><![endif]-->
+                <img class="lazyload" data-src="http://placehold.it/1600x720/00ffff" alt="@(imageUrl)">
+            </picture>
+        </div>
+        <div class="hero__image hero__image--gradient-cover carousel__item carousel__item--no-padding">    
+            <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                <source data-srcset="http://placehold.it/1600x720/1fff01" media="(min-width: 1024px)">
+                <source data-srcset="http://placehold.it/1200x675/1fff01 1x, http://placehold.it/1800x1012/1fff01 2x" media="(min-width: 768px)">
+                <source data-srcset="http://placehold.it/800x600/1fff01 1x, http://placehold.it/1200x900/1fff01 2x" media="(min-width: 480px)">
+                <source data-srcset="http://placehold.it/480x630/1fff01 1x, http://placehold.it/768x1008/1fff01 2x">
+                <!--[if IE 9]></video><![endif]-->
+                <img class="lazyload" data-src="http://placehold.it/1600x720/1fff01" alt="@(imageUrl)">
+            </picture>
+        </div>
+    </div>
+    <div class="hero-content">
+        <div class="hero-content__copy">
+            <h1>Built-In Refrigeration<br>
+                <small></small>
+            </h1>
+        </div>
+        <div class="hero-content__brand">
+            <a class="hero-content__brand-link hero-content__brand-link--subzero" href="/sub-zero"></a>
+            <a class="hero-content__brand-link hero-content__brand-link--wolf" href="/wolf"></a>
+            <a class="hero-content__brand-link hero-content__brand-link--wolfgourmet" href="/wolf-gourmet"></a>
+        </div>
+    </div>
+</div>
+<!--
+<div id="container" style="height: 600px; overflow: scroll;">
+    <p><img class="lazy" data-original="http://placehold.it/1600x720/ff0000" width="1600" height="720" alt=""></p>
+    <p><img class="lazy" data-original="http://placehold.it/1600x720/ffff00" width="1600" height="720" alt=""></p>
+    <p><img class="lazy" data-original="http://placehold.it/1600x720/ffffff" width="1600" height="720" alt=""></p>
+    <p><img class="lazy" data-original="http://placehold.it/1600x720/00ffff" width="1600" height="720" alt=""></p>
+    <p><img class="lazy" data-original="http://placehold.it/1600x720/0000ff" width="1600" height="720" alt=""></p>
+    <p><img class="lazy" data-original="http://placehold.it/1600x720/2f0000" width="1600" height="720" alt=""></p>
+    <p><img class="lazy" data-original="http://placehold.it/1600x720/2fff00" width="1600" height="720" alt=""></p>
+    <p><img class="lazy" data-original="http://placehold.it/1600x720/2fffff" width="1600" height="720" alt=""></p>
+    <p><img class="lazy" data-original="http://placehold.it/1600x720/20ffff" width="1600" height="720" alt=""></p>
+    <p><img class="lazy" data-original="http://placehold.it/1600x720/2000ff" width="1600" height="720" alt=""></p>
+    <p><img class="lazy" data-original="http://placehold.it/1600x720/3f0000" width="1600" height="720" alt=""></p>
+    <p><img class="lazy" data-original="http://placehold.it/1600x720/3fff00" width="1600" height="720" alt=""></p>
+    <p><img class="lazy" data-original="http://placehold.it/1600x720/3fffff" width="1600" height="720" alt=""></p>
+    <p><img class="lazy" data-original="http://placehold.it/1600x720/30ffff" width="1600" height="720" alt=""></p>
+    <p><img class="lazy" data-original="http://placehold.it/1600x720/3000ff" width="1600" height="720" alt=""></p>
+    <p><img class="lazy" data-original="http://placehold.it/1600x720/4f0000" width="1600" height="720" alt=""></p>
+    <p><img class="lazy" data-original="http://placehold.it/1600x720/4fff00" width="1600" height="720" alt=""></p>
+    <p><img class="lazy" data-original="http://placehold.it/1600x720/4fffff" width="1600" height="720" alt=""></p>
+    <p><img class="lazy" data-original="http://placehold.it/1600x720/50ffff" width="1600" height="720" alt=""></p>
+    <p><img class="lazy" data-original="http://placehold.it/1600x720/5000ff" width="1600" height="720" alt=""></p>
+    <p><img class="lazy" data-original="http://placehold.it/1600x720/5f0000" width="1600" height="720" alt=""></p>
+    <p><img class="lazy" data-original="http://placehold.it/1600x720/5fff00" width="1600" height="720" alt=""></p>
+    <p><img class="lazy" data-original="http://placehold.it/1600x720/5fffff" width="1600" height="720" alt=""></p>
+    <p><img class="lazy" data-original="http://placehold.it/1600x720/60ffff" width="1600" height="720" alt=""></p>
+    <p><img class="lazy" data-original="http://placehold.it/1600x720/6000ff" width="1600" height="720" alt=""></p>
+</div>-->
+
+<div class="column column--small-centered column--center-content">
+    <h2>Performance Comparison</h2>
+    <p class="small-text">* Results shown are a before and after adding lazy loading support to this current page, using 3 images.</p>
+    <div class="add-all-border add-padding">
+        <table>
+            <tr>
+                <th></th>
+                <th>Page Weight</th>
+                <th>Document Loaded</th>
+                <th>Fully Loaded</th>
+            </tr>
+            <tr>
+                <td>Original</td>
+                <td>2.1mb</td>
+                <td>605ms</td>
+                <td>1.67ms</td>
+            </tr>
+            <tr>
+                <td>Lazy Loading</td>
+                <td>1.6mb</td>
+                <td>712ms</td>
+                <td>1.22s</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="column column--xsmall-centered column--no-top-padding">
+    <h2 class="centered-text">Development Considerations</h2>
+    <ul>
+        <li>
+            For the purpose of this demo I stripped out responsive image support, as the carousel used (Slick) and the responsive solution (Picturefill) we use don't work together right out of the box. Luckily Slick can <a href="https://github.com/scottjehl/picturefill/issues/496">tap into Picturefill's API</a> to take care of this.
+        </li>
+        <li>
+            Carousels are set to autoplay. This was done in an effort to try and keep a page "fresh," but it also defeats the lazy loading, so it has been disable. 
+        </li>
+        <li>
+            It appears that <code>fade:true</code> seems to break the lazy loading. Since autoplay is disabled, do we need this or is the native slide functionality fine, as seen in other content carousels across the site.
+        </li>
+    </ul>     
+</div>
+
+<div class="column column--xsmall-centered column--no-top-padding">
+    <h2 class="centered-text">Conclusions</h2>
+    <ul>
+        <li>
+            This solution is super effective in decreasing page load times and handling excess page weight on hero image heavy pages. 
+        </li>
+        <li>
+            This could (and absolutely should) be implemented into store product detail pages, as well as all carousels on the site. 
+        </li>
+    </ul>
+</div>
+
+<section class="column"></section>
+

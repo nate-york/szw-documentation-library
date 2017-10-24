@@ -1,0 +1,29 @@
+
+<ul class="padded-list page-nav">
+    {{#each collections.pages}}
+        {{!-- filter out pages that aren't in the current category --}}
+        {{#ifCond ../slug '===' slug}}
+            {{!-- if current page, show link with headings () --}}
+            {{#ifCond ../title '===' title}}
+                <li class="padded-list__item">
+                    <a href="../{{path}}" class="link--small-caps">{{title}}</a>
+                    {{#if headings}}
+                    <ul>
+                        {{#each headings}}
+                        <li>
+                            <a href="#{{lowerCaseHyphenate text}}" class="link-undressed">{{text}}</a>
+                        </li>
+                        {{/each}}
+                    </ul>
+                    {{/if}}
+                </li>
+            {{/ifCond}}
+            {{!-- if it's not the current page, just link the page --}}
+            {{#ifCond ../title '!==' title}}
+                <li class="padded-list__item">
+                    <a href="/library/{{library}}/{{path}}" class="link--small-caps">{{title}}</a>
+                </li>
+            {{/ifCond}}
+        {{/ifCond}}
+    {{/each}}
+</ul>

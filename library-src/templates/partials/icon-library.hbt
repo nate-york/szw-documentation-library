@@ -1,0 +1,104 @@
+<div data-tab_arrow_direction="down" class="tab-group">
+    <div class="tab-group__arrow-down" style="width: 33%; left: 0px;"></div>
+    <ul class="tab-group__tab-list" id="tab-demo">
+        <li class="tab-group__list-item active" style="width: 33%;">
+            <a class="tab-group__link" data-toggle="tab" href="#one-tab">Dark Icons</a>
+        </li>
+        <li class="tab-group__list-item" style="width: 33%;">
+            <a class="tab-group__link" data-toggle="tab" href="#two-tab">Light Icons</a>
+        </li>
+        <li class="tab-group__list-item" style="width: 33%;">
+            <a class="tab-group__link" data-toggle="tab" href="#three-tab">Neutral Icons</a>
+        </li>
+    </ul>
+</div>
+
+<div class="js-tab-content tab-content">
+
+    {{!-- DARK --}}
+    <div class="js-tab-pane tab-pane fade active in" id="one-tab">
+        <section class="column column--no-padding column--small-centered">
+            <p>
+                Icons that look best on a light background
+            </p>
+
+            <ul id="grid-container" class="grid-container--threecol">
+                {{#each icons.dark}}
+                    <li class="grid-container__element">
+                        <div class="grid-block">
+                            <div class="grid-block__content">
+                                <div class="icon-example">
+                                    <div class="icon {{name}}"></div>
+                                </div>
+                                <div class="icon-name">
+                                    <input type="text" name="name" value="{{name}}">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+
+        </section>
+    </div>
+
+    {{!-- LIGHT  --}}
+    <div class="js-tab-pane location-frameset__single-tab tab-pane fade" id="two-tab">
+        <section class="column column--no-padding column--small-centered">
+            <p>
+                Icons that look best on a dark background
+            </p>
+
+            <ul id="grid-container" class="grid-container--threecol">
+                {{#each icons.light}}
+                    <li class="grid-container__element">
+                        <div class="grid-block">
+                            <div class="grid-block__content icon-example--dark-bg">
+                                <div class="icon-example">
+                                    <div class="icon {{name}}"></div>
+                                </div>
+                                <div class="icon-name">
+                                    <input type="text" name="name" value="{{name}}">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+
+        </section>
+    </div>
+
+    {{!-- NEUTRAL --}}
+    <div class="js-tab-pane location-frameset__single-tab tab-pane fade" id="three-tab">
+        <section class="column column--no-padding js-canToggleBg">
+            <p>
+                Icons that look good on both light and dark backgrounds
+            </p>
+
+            <p>
+                <button type="button" name="button" class="btn btn--primary-dark btn--block js-iconBgToggle">Toggle background color</button>
+            </p>
+
+            <ul id="grid-container" class="grid-container--threecol">
+                {{#each icons.neutral}}
+                    <li class="grid-container__element">
+                        <div class="grid-block">
+                            <div class="grid-block__content">
+                                <div class="icon-example">
+                                    <div class="icon {{name}}"></div>
+                                </div>
+                                <div class="icon-name">
+                                    <input type="text" name="name" value="{{name}}">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                {{/each}}
+
+            </ul>
+        </section>
+   </div>
+
+</div>

@@ -1,0 +1,60 @@
+<ul class="padded-list list-unstyled" data-toggle="accordion" data-category="{{slug}}">
+    {{#each navs.primary}}
+        {{!-- CATEGORY NAME--}}
+        {{!--<li class="js-accordion-list__item padded-list__item {{#ifCond file.slug '===' ../slug}}open{{/ifCond}}">--}}
+        <li class="js-accordion-list__item padded-list__item open">
+            {{#if file}}
+                <a class="link--small-caps js-accordion-list__trigger" href="">
+                    {{file.title}}
+                    <div class="icon accordion-icon icon_section-expand--neutral"></div>
+                </a>
+            {{else}}
+                <a class="accordion-list__link accordion-list__link--small-caps js-accordion-list__trigger" href="">
+                    {{this.title}}
+                    <div class="icon accordion-icon icon_section-expand--neutral"></div>
+                </a>
+            {{/if}}
+            
+            {{!-- CATEGORY PAGES --}}
+            {{!--<ul class="js-accordion-interior {{#ifCond file.slug '!==' ../slug}}sr-only{{/ifCond}} open list-unstyled">--}}
+            {{!--<ul class="js-accordion-interior sr-only list-unstyled">--}}
+                <ul class="js-accordion-interior list-unstyled open">
+                {{#if children}}
+                    {{#each children}}
+                        <li>
+                            {{!--  --}}
+                            {{#if file}}
+                                <a class="link-undressed {{#ifCond file.title '===' ../../title}}color-purple{{/ifCond}}" href="/../library/{{file.library}}/{{path}}">{{#ifCond file.title '===' ../../title}}<strong>{{/ifCond}}{{file.title}}{{#ifCond file.title '===' ../../title}}</strong>{{/ifCond}}</a>
+                            {{else}}
+                                <a class="link-undressed" href="/library/{{library}}/{{path}}" class="">{{name}}</a>
+                            {{/if}}
+
+                            {{!-- If current page, display page heading nav --}}
+                            {{#ifCond file.title '===' ../../title}}
+                                {{!-- PAGE HEADINGS --}}
+                                {{#each ../../collections.pages}}
+                                    {{!-- if current page, show link with headings () --}}
+                                    {{#ifCond ../file.slug '===' ../../file.slug}}
+                                            
+                                        {{#ifCond title '===' ../file.title}}
+                                            {{#if headings}}
+                                                <ul class="list-unstyled">
+                                                    {{#each headings}}
+                                                    <li>
+                                                        <a href="#{{lowerCaseHyphenate text}}" class="link-undressed xsmall-text add-left-padding">{{text}}</a>
+                                                    </li>
+                                                    {{/each}}
+                                                </ul>
+                                            {{/if}}
+                                        {{/ifCond}}
+                                    {{/ifCond}}
+                                {{/each}}
+                            {{/ifCond}}
+                        </li>
+                    {{/each}}
+                {{/if}}
+            </ul>
+
+        </li>
+    {{/each}}
+</ul>

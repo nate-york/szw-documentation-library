@@ -1,0 +1,37 @@
+{{> header }}
+
+        <section class="column column--centered column--center-content">
+            <h1>{{ title }}</h1>
+            {{#if description }}
+                <p>{{ description }}</p>
+            {{/if}}
+
+        </section>
+        
+        <section class="column column--centered column--center-content column--no-top-padding">
+            <ul class="grid-container">
+                {{#each libraries}}
+                    {{#ifCond draft '!==' true}}
+                        <li class="grid-container__element grid-container__element--no-img-rules">
+                            <div class="grid-block">
+                                <a class="grid-block__link-block" href="/library/{{this.path}}">
+                                    <div class="grid-block__content add-all-border-block">
+                                        <div class="grid-block__content">
+                                            {{#if listing-icon}}
+                                                <picture>
+                                                    <source srcset="/library/assets/images/listing-icons/{{listing-icon}}.svg" type="image/svg+xml">
+                                                    <img srcset="/library/assets/images/listing-icons/{{listing-icon}}.png" alt="{{title}}">
+                                                </picture>
+                                            {{/if}}
+                                            <h3>{{this.title}}</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    {{/ifCond}}
+                {{/each}}
+            </ul>
+        </section>
+
+{{> footer }}

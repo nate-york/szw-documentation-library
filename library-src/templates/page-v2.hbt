@@ -1,0 +1,34 @@
+{{> header-v2 }}
+    {{> _breadcrumbs }}
+    <section class="column column--small-centered">
+        <div class="content-block content-block--wide">
+            
+            {{!-- SIDE NAV--}}
+            <div class="content-block__sidebar">
+                {{> side-nav }}
+            </div>
+            
+            {{!-- CONTENT --}}
+            <div class="content-block__main-column">
+                
+                {{!-- HEADING AND DESCRIPTION--}}
+                <h1>{{ title }}</h1>
+                
+                {{!-- CONTENT --}}
+                {{#if contents}}
+                    {{{ contents }}}
+                {{/if}}
+
+                {{#ifCond title '===' "Icons"}}
+                    {{> icon-library}}
+                {{/ifCond}}
+
+                {{#ifCond title '===' "Colors"}}
+                    {{> colors}}
+                {{/ifCond}}
+
+            </div>
+        </div>
+    </section>
+
+{{> footer }}

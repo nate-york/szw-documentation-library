@@ -1,0 +1,164 @@
+---
+title: Hero Image Page Weight
+description: 03.21.2017 || Nate York
+category: prototypes
+nav_sort: 1
+---
+<style>
+    td:nth-child(n+2){ text-align: center;}
+</style>
+
+<section class="column column--xsmall-centered column--center-content column--no-top-padding">
+    <h2>Objective</h2>
+    <p>
+        In order to reduce overall page weight, test to see if we can use smaller image dimensions without a big hit to quality, in order to reduce file size, which in turn would result in faster page load times.
+    </p>
+</section>
+
+<div class="hero">
+    <div class="hero__image hero__image--gradient-cover">
+        <picture>
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="/library/assets/images/prototypes/hero-images/1900x855.jpg" media="(min-width: 1024px)">
+            <source srcset="/library/assets/images/prototypes/hero-images/1200x675.jpg, /library/assets/images/prototypes/hero-images/1800x1012.jpg 2x" media="(min-width: 768px)">
+            <source srcset="/library/assets/images/prototypes/hero-images/800x600.jpg, /library/assets/images/prototypes/hero-images/1200x900.jpg 2x" media="(min-width: 480px)">
+            
+            <!--[if IE 9]></video><![endif]-->
+            <!--[if lt IE 9]>
+                <img class="ie8-flex" src="/assets/images/hero-images/prototypes/1900x855.jpg" alt="">
+            <![endif]-->
+            <!--[if !lt IE 9]><!-->
+            <img srcset="/library/assets/images/prototypes/hero-images/480x630.jpg, /library/assets/images/prototypes/hero-images/960x1260.jpg 2x">
+            <!-- <![endif]-->
+        </picture>
+    </div>
+    <div class="hero-content">
+        <div class="hero-content__copy">
+            <h1>Original Version<br>
+                <small></small>
+            </h1>
+        </div>
+        <div class="hero-content__brand">
+            <a class="hero-content__brand-link hero-content__brand-link--subzero" href="/sub-zero"></a>
+            <a class="hero-content__brand-link hero-content__brand-link--wolf" href="/wolf"></a>
+            <a class="hero-content__brand-link hero-content__brand-link--wolfgourmet" href="/wolf-gourmet"></a>
+        </div>
+    </div>
+</div>
+
+<section class="column"></section>
+
+<div class="hero">
+    <div class="hero__image hero__image--gradient-cover">
+        <picture>
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="/library/assets/images/prototypes/hero-images/1600x720.jpg" media="(min-width: 1024px)">
+            <source srcset="/library/assets/images/prototypes/hero-images/1024x576.jpg, /library/assets/images/prototypes/hero-images/1800x1012.jpg 2x" media="(min-width: 768px)">
+            <source srcset="/library/assets/images/prototypes/hero-images/768x576.jpg, /library/assets/images/prototypes/hero-images/1200x900.jpg 2x" media="(min-width: 480px)">
+            
+            <!--[if IE 9]></video><![endif]-->
+            <!--[if lt IE 9]>
+                <img class="ie8-flex" src="/assets/images/hero-images/prototypes/1600x720.jpg" alt="">
+            <![endif]-->
+            <!--[if !lt IE 9]><!-->
+            <img srcset="/library/assets/images/prototypes/hero-images/480x630.jpg, /library/assets/images/prototypes/hero-images/960x1260.jpg 2x">
+            <!-- <![endif]-->
+        </picture>
+    </div>
+    <div class="hero-content">
+        <div class="hero-content__copy">
+            <h1>Reduced Size<br>
+                <small></small>
+            </h1>
+        </div>
+        <div class="hero-content__brand">
+            <a class="hero-content__brand-link hero-content__brand-link--subzero" href="/sub-zero"></a>
+            <a class="hero-content__brand-link hero-content__brand-link--wolf" href="/wolf"></a>
+            <a class="hero-content__brand-link hero-content__brand-link--wolfgourmet" href="/wolf-gourmet"></a>
+        </div>
+    </div>
+</div>
+
+<div class="column column--centered column--center-content">
+    <h2>Page Weight Comparison</h2>
+    <div class="add-all-border add-padding">
+        
+        <table>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th colspan="3" class="centered-text">Estimated Load Time Saved (per image)</th>
+            </tr>
+            <tr>
+                <th>Format (displays at)</th>
+                <th>Original File Size (kb)</th>
+                <th>Reduced File Size (kb)</th>
+                <th>File Size Reduction (kb)</th>
+                <th>3g (1.5mbps)</th>
+                <th>LTE (4mbps)</th>
+                <th>WiFi (20mbps)</th>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Large (viewport min-width: 1024px)</strong><br>
+                    Original Dimension - 1900x855<br>
+                    Reduced Dimension - 1600x720
+                </td>
+                <td>217</td>
+                <td>163</td>
+                <td>54</td>
+                <td>.29s</td>
+                <td>.11s</td>
+                <td>.02s</td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Medium High (viewport min-width: 768px)</strong><br>
+                    Original Dimension - 1200x675<br>
+                    Reduced Dimension - 1024x576
+                </td>
+                <td>114</td>
+                <td>86</td>
+                <td>28</td>
+                <td>.14s</td>
+                <td>.06s</td>
+                <td>.01s</td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Medium Low (viewport min-width: 480px)</strong><br>
+                    Original Dimension - 800x600<br>
+                    Reduced Dimension - 768x576
+                </td>
+                <td>69</td>
+                <td>62</td>
+                <td>7</td>
+                <td>.03s</td>
+                <td>.01s</td>
+                <td>.002s</td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Small (viewport width: 0-479px)</strong><br>
+                    Original Dimension - 480x630<br>
+                    Reduced Dimension - 480x630
+                </td>
+                <td>47</td>
+                <td>47</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="column column--xsmall-centered column--center-content column--no-top-padding">
+    <h2>Conclusion</h2>
+    <p>Reducing image dimensions is effective in reducing file size of images without suffering much lack of quality at all. This will result in both page weight and page load reduction on any page across the site with hero images.</p>
+</div>
+
+<section class="column"></section>

@@ -1,0 +1,37 @@
+{{> header }}
+
+    {{> _breadcrumbs}}
+
+    <div class="column column--small-centered column--center-content">
+        <h1>{{ title }}</h1>
+        {{#if description}}
+            <p>{{ description }}</p>
+        {{/if}}
+    </div>
+
+    <div class="column column--small-centered">
+        <div class="content-block content-block--wide">
+            <div class="content-block__two-thirds">
+
+                {{!-- Page Contents  --}}
+                <section class="column column--no-top-padding column--unpadded">
+                    {{#if contents}}
+                        {{{ contents }}}
+                    {{/if}}
+
+                    {{#ifCond title '===' "Icons"}}
+                        {{> icon-library}}
+                    {{/ifCond}}
+
+                    {{#ifCond title '===' "Colors"}}
+                        {{> colors}}
+                    {{/ifCond}}
+                </section>
+
+            </div>
+            <div class="content-block__one-third">
+                {{> pagenav }}
+            </div>
+        </div>
+
+{{> footer }}

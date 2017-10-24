@@ -1,0 +1,95 @@
+{
+    "brand" : [
+        {
+            "name" : "Sub-Zero",
+            "hex" : "#0081c6",
+            "sass" : "branding-subzero"
+        },
+        {
+            "name" : "Wolf",
+            "hex" : "#c0311a",
+            "sass" : "branding-wolf"
+        },
+        {
+            "name" : "Brand Neutral",
+            "hex" : "#5b5378",
+            "sass" : "branding-neutral"
+        }
+    ],
+    "grayscale" : [
+        {
+            "name" : "Black",
+            "hex" : "#000000",
+            "sass" : "black"
+        },
+        {
+            "name" : "Extradark",
+            "hex" : "#151415",
+            "sass" : "primary-color-extradark"
+        },
+        {
+            "name" : "Dark",
+            "hex" : "#333333",
+            "sass" : "primary-color-dark"
+        },
+        {
+            "name" : "Primary",
+            "hex" : "#4c4d4f",
+            "sass" : "primary-color"
+        },
+        {
+            "name" : "Secondary",
+            "hex" : "#808184",
+            "sass" : "secondary-color"
+        },
+        {
+            "name" : "Light",
+            "hex" : "#999999",
+            "sass" : "primary-color-light"
+        },
+        {
+            "name" : "Extralight",
+            "hex" : "#f7f7f7",
+            "sass" : "primary-color-extralight"
+        },
+        {
+            "name" : "White",
+            "hex" : "#ffffff",
+            "sass" : "white"
+        }
+    ],
+    "notification" : [
+        {
+            "name" : "Error",
+            "hex" : "#9b2115",
+            "sass" : "alert-color"
+        },
+        {
+            "name" : "Warning",
+            "hex" : "#fcb42e",
+            "sass" : "warning-color"
+        },
+        {
+            "name" : "Success",
+            "hex" : "#58c026",
+            "sass" : "success-color"
+        }
+    ],
+    "promotional" : [
+        {
+            "name" : "Auburn",
+            "hex" : "#a9402c",
+            "sass" : "branding-auburn"
+        },
+        {
+            "name" : "Yellow",
+            "hex" : "#da9735",
+            "sass" : "branding-yellow"
+        },
+        {
+            "name" : "Green",
+            "hex" : "#40803e",
+            "sass" : "branding-green"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+<li class="grid-container__element">
+    <div class="grid-block">
+        <div class="grid-block__content grid-block__content--no-top-padding">
+            <div class="color-swatch color-swatch--{{sass}}"></div>
+            <div class="color-name">
+                <h3>{{name}}</h3>
+                <input type="text" name="name" value="{{hex}}">
+                <input type="text" name="name" value="${{sass}}">
+            </div>
+        </div>
+    </div>
+</li>

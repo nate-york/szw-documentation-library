@@ -1,0 +1,99 @@
+---
+title: Carousel Lazy Loading
+description: 03.22.2017 || Nate York
+category: prototypes
+nav_sort: 2
+---
+<style>
+    td:nth-child(n+2){ text-align: center;}
+</style>
+
+<section class="column column--xsmall-centered column--center-content column--no-top-padding">
+    <h2>Objective</h2>
+    <p>
+        Add lazy loading support to hero images so that only the first image is loaded on page load, and the others are loaded on demand only. This should result in quicker page load times. 
+    </p>
+</section>
+
+<div class="hero">
+    <div class="component-pane-holder js-slick-hero--lazy">
+        <div class="hero__image hero__image--gradient-cover carousel__item carousel__item--no-padding">
+            <img data-lazy="http://www.subzero-wolf.com/-/media/images/united-states/widen/product-heroes/sm_bw-30_bi-36ug_slg_52215.jpg?quality=80&amp;width=1900&amp;height=855&amp;mode=crop" alt="">
+        </div>
+        <div class="hero__image hero__image--gradient-cover carousel__item carousel__item--no-padding">
+            <img data-lazy="http://www.subzero-wolf.com/-/media/images/united-states/widen/product-heroes/bi-30u-pair_so30te_wwd30_ci304c_vi42b.jpg?quality=80&amp;width=1900&amp;height=855&amp;mode=crop">
+        </div>
+        <div class="hero__image hero__image--gradient-cover carousel__item carousel__item--no-padding">    
+            <img data-lazy="http://www.subzero-wolf.com/-/media/images/united-states/widen/product-heroes/cso30cm_ci304c_vi42b_uw-24_do30cm_tm_slg-(2).jpg?quality=80&amp;width=1900&amp;height=855&amp;mode=crop" alt="">
+        </div>
+    </div>
+    <div class="hero-content">
+        <div class="hero-content__copy">
+            <h1>Built-In Refrigeration<br>
+                <small></small>
+            </h1>
+        </div>
+        <div class="hero-content__brand">
+            <a class="hero-content__brand-link hero-content__brand-link--subzero" href="/sub-zero"></a>
+            <a class="hero-content__brand-link hero-content__brand-link--wolf" href="/wolf"></a>
+            <a class="hero-content__brand-link hero-content__brand-link--wolfgourmet" href="/wolf-gourmet"></a>
+        </div>
+    </div>
+</div>
+
+<div class="column column--small-centered column--center-content">
+    <h2>Performance Comparison</h2>
+    <p class="small-text">* Results shown are a before and after adding lazy loading support to this current page, using 3 images.</p>
+    <div class="add-all-border add-padding">
+        <table>
+            <tr>
+                <th></th>
+                <th>Page Weight</th>
+                <th>Document Loaded</th>
+                <th>Fully Loaded</th>
+            </tr>
+            <tr>
+                <td>Original</td>
+                <td>2.1mb</td>
+                <td>605ms</td>
+                <td>1.67ms</td>
+            </tr>
+            <tr>
+                <td>Lazy Loading</td>
+                <td>1.6mb</td>
+                <td>712ms</td>
+                <td>1.22s</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="column column--xsmall-centered column--no-top-padding">
+    <h2 class="centered-text">Development Considerations</h2>
+    <ul>
+        <li>
+            For the purpose of this demo I stripped out responsive image support, as the carousel used (Slick) and the responsive solution (Picturefill) we use don't work together right out of the box. Luckily Slick can <a href="https://github.com/scottjehl/picturefill/issues/496">tap into Picturefill's API</a> to take care of this.
+        </li>
+        <li>
+            Carousels are set to autoplay. This was done in an effort to try and keep a page "fresh," but it also defeats the lazy loading, so it has been disable. 
+        </li>
+        <li>
+            It appears that <code>fade:true</code> seems to break the lazy loading. Since autoplay is disabled, do we need this or is the native slide functionality fine, as seen in other content carousels across the site.
+        </li>
+    </ul>     
+</div>
+
+<div class="column column--xsmall-centered column--no-top-padding">
+    <h2 class="centered-text">Conclusions</h2>
+    <ul>
+        <li>
+            This solution is super effective in decreasing page load times and handling excess page weight on hero image heavy pages. 
+        </li>
+        <li>
+            This could (and absolutely should) be implemented into store product detail pages, as well as all carousels on the site. 
+        </li>
+    </ul>
+</div>
+
+<section class="column"></section>
+

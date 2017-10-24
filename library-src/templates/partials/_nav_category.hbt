@@ -1,0 +1,6 @@
+<ul>
+    {{#each navs.library}}
+        {{> _nav__children}}
+        {{title}}
+    {{/each}}
+</ul>

@@ -1,0 +1,358 @@
+---
+title: Locator / Brochure Request Frames
+description: 06.15.2017 || Nate York
+category: prototypes
+nav_sort: 4
+---
+
+<style>
+    .gray-box {
+        background: #808184;
+        color: white;
+        padding: .5rem;
+        font-size: 12px;
+    }
+    .gray-box a {
+        color: white;
+        font-size: 12px;
+    }
+    .content-block img {
+        width: 100%;
+    }
+    .grid img {
+        width: 100%;
+    }
+    .bottom-align {
+        position: absolute;
+        bottom: 0;
+    }
+    .hide-over-868 {
+        display: block;
+    }
+    
+    .hide-under-868 {
+        display: none;
+    }
+    .grid {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        position: relative;
+    }
+    .grid--break-1024 {
+        flex-direction: column
+    }
+    .grid__item-33,
+    .grid__item-40,
+    .grid__item-50,
+    .grid__item-60,
+    .grid__item-66 {
+        width: 100%;
+    }
+    .grid__item-bottom {
+        align-self: flex-end;
+    }
+    .grid__item-center {
+        align-self: center;
+    }
+    .grid__item-swap-1 {
+        order: 1;
+    }
+    .grid__item-swap-2 {
+        order: 2;
+    }
+    .bottom-margin-under-868 {
+        margin-bottom: 2rem;
+    }
+    @media screen and (min-width: 868px) {
+        
+        .gray-box,
+        .gray-box a {
+            font-size: 13px;
+        }
+        .hide-under-868 {
+            display: block;
+        }
+        .hide-over-868 {
+            display: none;
+        }
+        .grid {
+            flex-direction: row;
+        }
+        .grid--break-1024 {
+            flex-direction: column
+        }
+        .grid__item-33 {
+            width: 32%;
+        }
+        .grid__item-40 {
+            width: 39%;
+        }
+        .grid__item-50 {
+            width: 49%;
+        }
+        .grid__item-60 {
+            width: 59%;
+        }
+        .grid__item-66 {
+            width: 65%;
+        }
+        .grid__item-swap-1 {
+            order: 2;
+        }
+        .grid__item-swap-2 {
+            order: 1;
+        }
+        .bottom-margin-under-868 {
+            margin-bottom: 0;
+        }
+        .grid__item-40--break-1024,
+        .grid__item-60--break-1024 {
+            width: 100%;
+        }
+    }
+    @media screen and (min-width: 960px) {
+        .gray-box {
+            padding: 1rem;
+        }
+        .gray-box,
+        .gray-box a {
+            font-size: 14px;
+        }
+        .grid--break-1024 {
+            flex-direction: column
+        }
+        .grid__item-40--break-1024,
+        .grid__item-60--break-1024 {
+            width: 100%;
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        .grid--break-1024 {
+            flex-direction: row;
+        }
+        .grid__item-40--break-1024 {
+            width: 39%;
+        }
+        .grid__item-60--break-1024 {
+            width: 59%;
+        }
+    }
+
+</style>
+
+<!-- Locator-only frame, within range -->
+<section class="column column--centered">
+    <h2 class="centered-text">Locator-only frame, within range</h2>
+    <div class="grid">
+        <!-- 1/2 1/2 -->
+        <div class="grid__item-50 grid__item-swap-2 grid__item-center">
+            <div class="address-recipe address--no-top-margin">
+                <div class="vcard" id="Sub-Zero Wolf Midwest">
+                    <h3 class="org fn js-showroomName">Sub-Zero Wolf Midwest</h3>
+                    <p class="adr small-text">
+                        <span class="street-address" style="display: block;">196 EXCHANGE BOULEVARD</span>
+                        <span class="locality">GLENDALE HEIGHTS</span>, <span class="region">IL</span> <span class="postal-code">60139</span>
+                        <span class="tel" style="display: block;">
+                            <a href="tel:6308725100">
+                                <strong>
+                                    <span class="value locator-phone">(630) 872-5100</span>
+                                </strong>
+                            </a>
+                        </span>
+                    </p>
+                </div>
+                <p class="small-text no-bottom-margin">
+                    <strong>Open to the Public:</strong>
+                    Mon-Thu 8am-5pm.  Fri: 8am-4:30pm. To provide the best service, we highly recommend scheduling an appointment.
+                </p>
+                <p>
+                    <a href="#">Find another location</a>
+                </p>
+                <div class="btn btn--primary btn--centered btn--block no-bottom-margin">
+                    Schedule a visit
+                </div>
+            </div>
+        </div>
+        <div class="grid__item-50 grid__item-swap-1 grid__item-center">
+            <img src="\library\assets\images\prototypes\locator-frame\frame-a.jpg" alt="">
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Locator-only frame, out of range -->
+<section class="column column--centered">
+    <h2 class="centered-text">Locator-only frame, out of range</h2>
+    <div class="grid">
+        <!-- 1/2 1/2 -->
+        <div class="grid__item-50 grid__item-swap-2 grid__item-center">
+            <div class="address-recipe no-margin">
+                <div class="vcard" id="Sub-Zero Wolf Midwest">
+                    <h3 class="org fn js-showroomName">Sub-Zero Wolf Midwest</h3>
+                    <div class="grid">
+                        <div class="grid__item-66">
+                            <p class="adr small-text">
+                                <span class="street-address" style="display: block;">196 EXCHANGE BOULEVARD</span>
+                                <span class="locality">GLENDALE HEIGHTS</span>, <span class="region">IL</span> <span class="postal-code">60139</span>
+                                <span class="tel" style="display: block;">
+                                    <a href="tel:6308725100">
+                                        <strong>
+                                            <span class="value locator-phone">(630) 872-5100</span>
+                                        </strong>
+                                    </a>
+                                </span>
+                            </p>
+                            <p class="small-text no-bottom-margin">
+                                <strong>Open to the Public:</strong>
+                                Mon-Thu 8am-5pm.  Fri: 8am-4:30pm. To provide the best service, we highly recommend scheduling an appointment.
+                            </p>
+                            <p>
+                                <a href="#">Find another location</a>
+                            </p>
+                        </div>
+                        <div class="grid__item-33 grid__item-bottom">
+                            <p class="no-padding">
+                                <div class="centered-text gray-box">
+                                    THIS IS YOUR CLOSEST SHOWROOM.<br/>
+                                    OR<br/>
+                                    <a href="">FIND A LOCAL DEALER</a>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn btn--primary btn--block btn--centered no-bottom-margin">
+                    Schedule a visit
+                </div>
+            </div>
+        </div>
+        <div class="grid__item-50 grid__item-swap-1 grid__item-center">
+            <img src="\library\assets\images\prototypes\locator-frame\frame-a.jpg" alt="">
+        </div>
+    </div>
+</section>
+
+<!-- Combo Locator/BroRequest Frame, within range -->
+<section class="column column--centered">
+    <h2 class="centered-text">Combo Locator/BroRequest Frame, within range</h2>
+    <div class="grid">
+        <!-- 1/2 1/2 -->
+        <div class="grid__item-40 grid__item-bottom bottom-margin-under-868">
+            <div class="address-recipe address--no-top-margin">
+                <div class="vcard" id="Sub-Zero Wolf Midwest">
+                    <h3 class="org fn js-showroomName">Sub-Zero Wolf Midwest</h3>
+                    <p class="adr small-text">
+                        <span class="street-address" style="display: block;">196 EXCHANGE BOULEVARD</span>
+                        <span class="locality">GLENDALE HEIGHTS</span>, <span class="region">IL</span> <span class="postal-code">60139</span>
+                        <span class="tel" style="display: block;">
+                            <a href="tel:6308725100">
+                                <strong>
+                                    <span class="value locator-phone">(630) 872-5100</span>
+                                </strong>
+                            </a>
+                        </span>
+                    </p>
+                </div>
+                <p class="small-text no-bottom-margin">
+                    <strong>Open to the Public:</strong>
+                    Mon-Thu 8am-5pm.  Fri: 8am-4:30pm. To provide the best service, we highly recommend scheduling an appointment.
+                </p>
+                <p>
+                    <a href="#">Find another location</a>
+                </p>
+                <p>
+                    <div class="btn btn--primary btn--block">
+                        Schedule a visit
+                    </div>
+                </p>
+            </div>
+        </div>
+        <div class="grid__item-60">
+            <img src="\library\assets\images\prototypes\locator-frame\frame-b.jpg" alt="">
+            <div class="grid grid--break-1024">
+                <div class="grid__item-60 grid__item-60--break-1024">
+                    <p class="small-text no-bottom-margin">
+                        Want to learn more about the complete line of Sub-Zero and Wolf appliances?
+                    </p>
+                </div>
+                <div class="grid__item-40 grid__item-40--break-1024">
+                    <p class="no-bottom-margin">
+                        <div class="btn btn--block btn--primary no-bottom-margin">
+                            Request a Brochure
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Combo Locator/BroRequest Frame, out of range -->
+<section class="column column--centered">
+    <h2 class="centered-text">Combo Locator/BroRequest Frame, out of range</h2>
+    <div class="grid">
+        <!-- 1/2 1/2 -->
+        <div class="grid__item-40 grid__item-bottom bottom-margin-under-868">
+            <div class="address-recipe address--no-top-margin">
+                <div class="vcard" id="Sub-Zero Wolf Midwest">
+                    <h3 class="org fn js-showroomName">Sub-Zero Wolf Midwest</h3>
+                    <div class="grid">
+                        <div class="grid__item-66">
+                            <p class="adr small-text">
+                                <span class="street-address" style="display: block;">196 EXCHANGE BOULEVARD</span>
+                                <span class="locality">GLENDALE HEIGHTS</span>, <span class="region">IL</span> <span class="postal-code">60139</span>
+                                <span class="tel" style="display: block;">
+                                    <a href="tel:6308725100">
+                                        <strong>
+                                            <span class="value locator-phone">(630) 872-5100</span>
+                                        </strong>
+                                    </a>
+                                </span>
+                            </p>
+                            <p class="small-text no-bottom-margin">
+                                <strong>Open to the Public:</strong>
+                                Mon-Thu 8am-5pm.  Fri: 8am-4:30pm. To provide the best service, we highly recommend scheduling an appointment.
+                            </p>
+                            <p>
+                                <a href="#">Find another location</a>
+                            </p>
+                        </div>
+                        <div class="grid__item-33 grid__item-bottom">
+                            <p class="no-padding">
+                                <div class="centered-text gray-box">
+                                    THIS IS YOUR CLOSEST SHOWROOM.<br/>
+                                    OR<br/>
+                                    <a href="">FIND A LOCAL DEALER</a>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    <div class="btn btn--primary btn--block no-bottom-margin">
+                        Schedule a visit
+                    </div>
+                </p>
+            </div>
+        </div>
+        <div class="grid__item-60">
+            <img src="\library\assets\images\prototypes\locator-frame\frame-b.jpg" alt="">
+            <div class="grid grid--break-1024">
+                <div class="grid__item-60 grid__item-60--break-1024">
+                    <p class="small-text no-bottom-margin">
+                        Want to learn more about the complete line of Sub-Zero and Wolf appliances?
+                    </p>
+                </div>
+                <div class="grid__item-40 grid__item-40--break-1024">
+                    <p class="no-bottom-margin">
+                        <div class="btn btn--block btn--primary no-bottom-margin">
+                            Request a Brochure
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

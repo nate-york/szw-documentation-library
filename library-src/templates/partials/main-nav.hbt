@@ -1,0 +1,44 @@
+<!-- MAIN NAVIGATION -->
+<nav id="menuContainer-reveal" class="deepNav posMenuAtLeftEdge" role="navigation" style="height: 1059px;">
+    <ul class="deepNav__list">
+        <div class="nav-header">
+            <div class="nav-row__group clearfix nav-row__group--header">
+                <a href="/library/" class="nav-header__text-link">
+                    <div class="icon icon_home--dark-lg"></div>
+                </a>
+            </div>
+
+            <div class="nav-row__group nav-row__group--header">
+                <a href="#" class="nav-header__menu-close js-menu-reset">&lt; Menu</a>
+            </div>
+        </div>
+
+        {{#each navs.primary}}
+            <li>
+                {{#if file}}
+                    <a href="" class="showHideIcon">+</a>
+                    <a href="/library/{{file.library}}/{{path}}" class="mp-menu__lead-link">{{file.slug}}</a>
+                {{else}}
+                    <a href="" class="showHideIcon">+</a>
+                    <a href="/library/{{library}}/{{path}}" class="mp-menu__lead-link">{{this.title}}</a>
+                {{/if}}
+
+                {{#if children}}
+                    <ul class="mp-menu__list">
+                        {{#each children}}
+                            <li>
+                                {{#if file}}
+                                    <div class="fauxShowHideIcon" href="">&nbsp;</div>
+                                    <a href="/../library/{{file.library}}/{{path}}" class="mp-menu__lead-link">{{file.title}}</a>
+                                {{else}}
+                                    <div class="fauxShowHideIcon" href="">&nbsp;</div>
+                                    <a href="/library/{{library}}/{{path}}" class="mp-menu__lead-link">{{name}}</a>
+                                {{/if}}
+                            </li>
+                        {{/each}}
+                    </ul>
+                {{/if}}
+            </li>
+        {{/each}}
+    </ul>
+</nav>

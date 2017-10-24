@@ -1,0 +1,5 @@
+<ul>
+    {{#each navs.footer}}
+        {{> _nav__children}}
+    {{/each}}
+</ul>

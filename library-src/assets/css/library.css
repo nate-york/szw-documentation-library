@@ -1,0 +1,400 @@
+img {
+    max-width: 100%;
+}
+
+hr {
+    border: 1px solid #f7f7f7;
+    margin: 3rem 0;
+    height: 0;
+}
+
+/* Remove current page from breadcrumb nav */
+li.breadcrumbs-list__item:nth-last-child(2) {
+    display: none;
+}
+
+/* Give content lists some nicety
+*************
+this should probably be "doc-list" or "standard-list" or something
+*************
+*/
+ul {
+    list-style: disc;
+}
+
+ul, ol {
+    padding: 0;
+    margin-left: 1em;
+}
+ul ul {
+    list-style-type: circle;
+}
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+    margin: 0;
+    padding-left: 40px;
+}
+
+/* page nav, no padding or spacing */
+.page-nav,
+.page-nav ul {
+    list-style: none outside;
+    padding: 0;
+    margin-left: 0;
+}
+
+/* -----------------------------
+ICON LIBRARY
+------------------------------*/
+.icon-library__grid .grid-block__content {
+		padding-top: 0;
+		padding-bottom: .5em;
+	}
+
+
+.icon-example {
+  display: block;
+  min-height: 130px;
+  position: relative;
+}
+
+.icon-example .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.icon-name input,
+.color-name input {
+    border: 0;
+    font-family: monospace,serif;
+    _font-family: courier new,monospace;
+    font-size: .75em;
+    text-align: center;
+    width: 100%;
+}
+
+.icon-example--dark-bg {
+    background: #333;
+}
+
+.icon-example--dark-bg input {
+    background-color: #333;
+    color: white;
+}
+
+.icon-example--neutral-bg {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+50,333333+50,333333+100 */
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(51,51,51,1) 50%, rgba(51,51,51,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(51,51,51,1) 50%,rgba(51,51,51,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(51,51,51,1) 50%,rgba(51,51,51,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#333333',GradientType=1 ); /* IE6-9 */
+}
+
+/* -----------------------------
+COLOR SWATCH STYLES
+------------------------------*/
+.color-swatch {
+	/*background-color: #5b5378;*/
+	position: relative;
+	height: 100px;
+	margin: 0 auto 1em auto;
+}
+
+/* -----------------------------
+COLOR SWATCH COLORS (create partial)
+------------------------------*/
+.color-swatch--black { background-color: #000;}
+.color-swatch--primary-color { background-color: #4c4d4f }
+.color-swatch--primary-color-dark { background-color: #333 }
+.color-swatch--primary-color-extradark { background-color: #151415 }
+.color-swatch--primary-color-medium { background-color: #666 }
+.color-swatch--primary-color-light { background-color: #999 }
+.color-swatch--primary-color-extralight { background-color: #f7f7f7 }
+.color-swatch--secondary-color { background-color: #808184 }
+.color-swatch--button-color { background-color: #f9f9f9 }
+.color-swatch--default-color { background-color: #5b5378; }
+.color-swatch--outline-color { background-color: #ececec }
+.color-swatch--block-gray { background-color: #ececec; }
+.color-swatch--block-gray--light { background-color: #f9f9f9 }
+.color-swatch--block-gray--medium { background-color: #f0f0f0 }
+.color-swatch--block-border-color { background-color: #d2d2d2 }
+.color-swatch--menu-border-color { background-color: #323232 }
+.color-swatch--menu-link-color { background-color: #fffdfd }
+.color-swatch--menu-background-color { background-color: #262626 }
+.color-swatch--info-color { background-color: #4a4d50 }
+.color-swatch--alert-color  { background-color: #9b2115 }
+.color-swatch--danger-color { background-color: #9b2115 }
+.color-swatch--warning-color { background-color: #fcb42e }
+.color-swatch--success-color { background-color: #58c026 }
+.color-swatch--branding-subzero { background-color: #0081c6 }
+.color-swatch--branding-wolf { background-color: #c0311a }
+.color-swatch--branding-neutral { background-color: #5b5378 }
+.color-swatch--branding-cove { background-color: #b6bd00 }
+.color-swatch--branding-yellow { background-color: #da9735 }
+.color-swatch--branding-auburn { background-color: #a9402c }
+.color-swatch--branding-green { background-color: #40803e }
+
+/* -----------------------------
+Brand Switching (/framework/brand-switching.scss)
+------------------------------*/
+..brand-switch li {
+  width: 51px;
+  text-align: center; }
+
+.brand-switch .brand__sz:hover,
+.brand-switch .brand__sz.active {
+  background-color: #0081c6; }
+
+.brand-switch .brand__wolf:hover,
+.brand-switch .brand__wolf.active {
+  background: #c0311a; }
+
+.brand-switch .brand__neutral span {
+  font-size: 1.5em;
+  font-family: "Medium", sans-serif;
+  line-height: 1; }
+
+.brand-switch .brand__neutral:hover,
+.brand-switch .brand__neutral.active {
+  background: #5b5378; }
+
+.brand-switch a {
+  text-decoration: none;
+  color: white; }
+
+.brand-switch a:hover {
+  color: white; }
+
+.brand-switch:before {
+  display: inline-block;
+  color: #999;
+  content: "BRANDING THEME";
+  margin-right: 1em;
+  vertical-align: middle }
+
+  li.icon-list__item.brand__neutral {
+      width: 57px;
+  }
+
+/* -----------------------------
+PRISM STYLES (create partial)
+------------------------------*/
+code {
+    border: 0;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+    border: 0;
+    font-size: .75rem;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #c5c8c6;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+    font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 2em;
+  margin: 2em 0 3.5em 0;
+  max-height: 30em;
+  position: relative;
+  overflow-x: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #1a1a1b;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #7C7C7C;
+}
+
+.token.punctuation {
+	color: #c5c8c6;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.keyword,
+.token.tag {
+    color: #96CBFE;
+}
+
+.token.class-name {
+	color: #FFFFB6;
+	text-decoration: underline;
+}
+
+.token.boolean,
+.token.constant {
+    color: #99CC99;
+}
+
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.number {
+	color: #FF73FD;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #A8FF60;
+}
+
+.token.variable {
+	color: #C6C5FE;
+}
+
+.token.operator {
+    color: #EDEDED;
+}
+
+.token.entity {
+    color: #FFFFB6;
+}
+
+.token.url {
+    color: #96CBFE;
+}
+
+.language-css .token.string,
+.style .token.string {
+	color: #87C38A;
+}
+
+.token.atrule,
+.token.attr-value {
+    color: #F9EE98;
+}
+
+.token.function {
+	color: #DAD085;
+}
+
+.token.regex {
+    color: #E9C062;
+}
+
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+pre[class*="language-markup"]:before,
+pre[class*="language-markdown"]:before,
+pre[class*="language-css"]:before,
+pre[class*="language-yaml"]:before,
+pre[class*="language-scss"]:before,
+pre[class*="language-javascript"]:before {
+    /*background-color: #FFF;*/
+    /*border-radius: 3px;*/
+    color: #FFF;
+    display: block;
+    right: 0;
+    letter-spacing: .13em;
+    opacity: .5;
+    padding: .25em 1em;
+    position: absolute;
+    text-transform: uppercase;
+    top: .25rem;
+}
+
+pre[class*="language-markup"]:before {
+    content:"Markup";
+}
+
+pre[class*="language-markdown"]:before {
+    content:"Markdown";
+}
+
+pre[class*="language-yaml"]:before {
+    content:"YAML";
+}
+
+pre[class*="language-css"]:before {
+    content:"CSS";
+}
+
+pre[class*="language-scss"]:before {
+    content:"Sass";
+}
+
+pre[class*="language-javascript"]:before {
+    content:"Javascript";
+}
+
+code {
+  padding: 0 .5em;
+}
+
+.demo-grid .column {
+    padding: 1em .25em;
+    background: #5b5378;
+    border:1px solid;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+}
+
+.demo-columns .column {
+    background: #5b5378;
+    color: white;
+}

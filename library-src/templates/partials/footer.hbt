@@ -1,0 +1,83 @@
+                </main>
+                <!-- END MAIN CONTENT -->
+
+                {{!-- FOOTER --}}
+                <div class="sticky-footer clearfix">
+
+                    {{!-- BRAND SWITCHER --}}
+                    {{#ifCond library '===' "patterns" }}
+                        <div class="sticky-footer__content-wrapper">
+                            <ul class="icon-list brand-switch">
+                                <li class="icon-list__item brand__sz">
+                                    <a href="#" class="icon-list__link"><div class="icon icon_logo-crystal-solid-sz--dark"></div></a>
+                                </li>
+                                <li class="icon-list__item brand__wolf">
+                                    <a href="#" class="icon-list__link"><div class="icon icon_logo-flame-solid-wolf--dark"></div></a>
+                                </li>
+                                <li class="icon-list__item brand__neutral active">
+                                    <a href="#" class="icon-list__link"><div class="icon icon-neutral"><span>N</span></div></a>
+                                </li>
+                            </ul>
+                            <div class="sticky-footer__left-content">
+                                <p></p>
+                            </div>
+                        </div>
+                    {{/ifCond}}
+                </div>
+            </div><!-- End content reveal -->
+        </div><!-- End container reveal -->
+
+        {{!-- SCRIPTS --}}
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="http://www.subzero-wolf.com/pattern-library/Scripts/jquery-1.10.2.min.js"><\/script>')</script>
+        {{!-- <script src="/slick.min.js"></script> --}}
+
+        {{!-- Pattern Library Specific Scripts --}}
+        {{#ifCond library '===' "patterns" }}
+
+
+
+            {{!-- PATTERN SPECIFIC SCRIPTS --}}
+            
+            {{!-- <script src="/Scripts/Framework/plugins.js"></script> --}}
+            <script src="/library/assets/scripts/picturefill.min.js"></script>
+            {{!-- <script src="/Scripts/Common/sticky-header.js"></script> --}}
+
+            <script src="/Scripts/Common/transition.js"></script>
+            <script src="/Scripts/Shared/responsive-slider/responsive-carousel.js"></script>
+            <script src="/Scripts/Common/modal.js"></script>
+            <script src="/Scripts/Common/jquery.placeholder.js"></script>
+            <script src="/Scripts/Common/jquery.customSelect.js"></script>
+            <script src="/Scripts/Common/forms.js"></script>
+            <script src="/Scripts/DiscoverProducts/discover-products.js"></script>
+            <script src="/Scripts/Shared/masonry.pkgd.min.js"></script>
+            <script src="/Scripts/Shared/imagesloaded.pkgd.min.js"></script>
+            <script src="/Scripts/Common/tab.js"></script>
+            <script src="/Scripts/Common/fancy-tabs-v2.js"></script>
+
+            {{!-- POSSIBLY UNUSED / NOT NEEDED YET
+            <script src="/Scripts/Common/search-slideout.js"></script>
+            <script src="/Scripts/Common/frameset-group-initializer.js"></script>
+            <script src="/Scripts/Common/frameset-initializer.js"></script>
+            <script src="/Scripts/Framework/jquery.hoverIntent.minified.js"></script>
+
+            --}}
+        {{/ifCond}}
+
+
+        {{!-- Global Scripts --}}
+        <script src="/Scripts/Common/accordion.js"></script>
+        <script src="/Scripts/Common/slick.min.js"></script>
+        {{!--<script src="/Scripts/Common/mlpushmenu-animate-2.js"></script>--}}
+        <script src="/Scripts/Common/breadcrumbs.js"></script>
+        <script src="/Scripts/Common/smartresize.js"></script>
+        <script src="/Scripts/Common/global-footer-formatting.js"></script>
+        {{!--<script src="/Scripts/Common/global-menu.js"></script>--}}
+        {{!-- LIBRARY SPECIFIC SCRIPTS --}}
+        <script src="/library/assets/scripts/main.js"></script> {{!-- Library specific UI functions --}}
+        {{!--<script src="/library/assets/scripts/jquery.lazyload.js"></script>--}}
+        <script src="/library/assets/scripts/lazysizes.min.js"></script>
+        <script src="/library/assets/scripts/prototype.js"></script> {{!-- Prototype specific JS --}}
+        <script src="/library/assets/scripts/vendor/prism-extended.js"></script> {{!-- syntax highlighting for code examples, library specific --}}
+    </body>
+</html>

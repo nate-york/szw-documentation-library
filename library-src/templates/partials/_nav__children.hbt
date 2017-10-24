@@ -1,0 +1,29 @@
+
+<li>
+    {{!--
+        currentNavNode.file
+    --}}
+    {{#if file}}
+        {{!--
+            @root === the template scope of the current file object being rendered
+            @root.nav_path === currentFileObject.nav_path
+            ('nav_path' property can be configured by navConfig.pathProperty = 'nav_path')
+
+            path === currentNavNode.path
+            (path property is set to all nav nodes)
+        --}}
+
+        <a href="{{this.path}}">file: {{file.title}}</a> {{this.path}}
+
+    {{else}}
+        <a href="/library/{{this.path}}">else: {{name}}</a>
+    {{/if}}
+    {{#if children}}
+        <ul>
+            {{#each children}}
+                {{> _nav__children}}
+            {{/each}}
+        </ul>
+    {{/if}}
+
+</li>

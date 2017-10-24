@@ -1,0 +1,79 @@
+{{> header-v2 }}
+
+    {{> _breadcrumbs }}
+
+    <section class="column column--small-centered">
+        <div class="content-block content-block--wide">
+            
+            {{!-- SIDE NAV--}}
+            <div class="content-block__sidebar">
+                {{> side-nav }}
+            </div>
+            
+            {{!-- CONTENT --}}
+            <div class="content-block__main-column">
+                
+                {{!-- HEADING AND DESCRIPTION--}}
+                {{#if listing-icon}}
+                    <picture>
+                        <source srcset="/library/assets/images/listing-icons/{{listing-icon}}.svg" type="image/svg+xml">
+                            <img srcset="/library/assets/images/listing-icons/{{listing-icon}}.png" alt="{{title}}">
+                    </picture>
+                {{/if}}
+
+                <h1>{{ title }}</h1>
+
+                {{!-- CONTENT --}}
+                {{#if contents}}
+                    {{{ contents }}}
+                {{/if}}
+
+                <section class="column column--centered column--full-width">
+                    <h2>{{title}} Topics</h2>
+                    <ul id="grid-container" class="grid-container--threecol">
+                        {{#each collections.pages}}
+                            {{!-- If page slug (category) matches current category page, render item --}}
+                            {{#ifCond ../slug '===' slug}}
+                                <li class="grid-container__element"  data-category="{{category}}">
+                                    <div class="grid-block">
+                                        <a class="grid-block__link-block" href="/library/{{library}}/{{path}}">
+                                            <div class="grid-block__content add-all-border-block">
+
+                                                <div class="grid-block__copy ">
+                                                    <h3>{{title}}</h3>
+                                                </div>
+
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                            {{/ifCond}}
+                        {{/each}}
+                        {{#ifCond library '===' "patterns" }}
+                            {{#each collections.prototypes}}
+                                {{!-- If page slug (category) matches current category page, render item --}}
+                                {{#ifCond ../slug '===' slug}}
+                                    <li class="grid-container__element"  data-category="{{category}}">
+                                        <div class="grid-block">
+                                            <a class="grid-block__link-block" href="/library/{{library}}/{{path}}">
+                                                <div class="grid-block__content add-all-border-block">
+
+                                                    <div class="grid-block__copy ">
+                                                        <h3>{{title}}</h3>
+                                                    </div>
+
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                {{/ifCond}}
+                            {{/each}}
+                        {{/ifCond}}
+                    </ul>
+                </section>
+
+            </div>
+        </div>
+    </section>
+
+{{> footer }}

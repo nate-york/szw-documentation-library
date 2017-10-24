@@ -1,0 +1,45 @@
+{{> header }}
+
+    {{> _breadcrumbs}}
+
+    <section class="column column--centered column--center-content column--no-top-padding">
+        {{#if listing-icon}}
+            <picture>
+                <source srcset="/library/assets/images/listing-icons/{{listing-icon}}.svg" type="image/svg+xml">
+                <img srcset="/library/assets/images/listing-icons/{{listing-icon}}.png" alt="{{title}}">
+            </picture>
+        {{/if}}
+        <h1>{{slug}}</h1>
+        {{#if description}}
+            <p>{{ description }}</p>
+        {{/if}}
+    </section>
+    <section class="column column--centered column--center-content column--no-top-padding">
+        <ul id="grid-container">
+            {{#each collections.pages}}
+                {{!-- If page slug (category) matches current category page, render item --}}
+                {{#ifCond ../slug '===' slug}}
+                    <li class="grid-container__element"  data-category="{{category}}">
+                        <div class="grid-block">
+                            <a class="grid-block__link-block" href="/library/{{library}}/{{path}}">
+                                <div class="grid-block__content add-all-border-block">
+
+                                    <div class="grid-block__copy ">
+                                        <h3>{{title}}</h3>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                {{/ifCond}}
+            {{/each}}
+        </ul>
+    </section>
+
+    {{!-- <section class="column column--centered;">
+        <h3>All Nav</h3>
+        {{> _nav_global}}
+    </section> --}}
+
+{{> footer }}

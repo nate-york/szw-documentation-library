@@ -1,0 +1,35 @@
+<section class="column column--no-top-padding column--unpadded column--small-centered">
+    <h2>Brand Colors</h2>
+    <ul id="grid-container" class="grid-container--threecol">
+        {{#each colors.brand}}
+            {{> color-element}}
+        {{/each}}
+    </ul>
+</section>
+
+<section class="column column--unpadded column--small-centered">
+    <h2>Grayscale Colors</h2>
+    <ul id="grid-container" class="grid-container--threecol">
+        {{#each colors.grayscale}}
+            {{> color-element}}
+        {{/each}}
+    </ul>
+</section>
+
+<section class="column column--unpadded column--small-centered">
+    <h2>Notification Colors</h2>
+    <ul id="grid-container" class="grid-container--threecol">
+        {{#each colors.notification}}
+            {{> color-element}}
+        {{/each}}
+    </ul>
+</section>
+
+<section class="column column--unpadded column--small-centered">
+    <h2>Promotional Colors</h2>
+    <ul id="grid-container" class="grid-container--threecol">
+        {{#each colors.promotional}}
+            {{> color-element}}
+        {{/each}}
+    </ul>
+</section>

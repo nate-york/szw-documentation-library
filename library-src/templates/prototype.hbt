@@ -1,0 +1,16 @@
+{{> header-v2 }}
+    {{!--{{> breadcrumbs }}--}}
+    <header class="column column--centered column--center-content">
+        {{!-- HEADING AND DESCRIPTION--}}
+        <h1>{{ title }}</h1>
+        {{#if description}}
+            {{ description }}
+        {{/if}}
+    </header>
+    
+    {{!-- CONTENT --}}
+    {{#if contents}}
+        {{{ contents }}}
+    {{/if}}
+
+{{> footer }}
